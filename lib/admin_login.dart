@@ -5,8 +5,8 @@ import 'package:homeworkout/btmnavigation.dart';
 // import 'package:homeworkout/btmnavigation.dart';
 // import 'package:homeworkout/home.dart';
 
-class Headpage extends StatelessWidget {
-  const Headpage({super.key});
+class Adminlogin extends StatelessWidget {
+  const Adminlogin({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class Headpage extends StatelessWidget {
       body: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 120, left: 20, right: 20),
+            padding: const EdgeInsets.only(top: 150, left: 20, right: 20),
             child: Container(
               height: 500,
               width: 350,
@@ -32,8 +32,9 @@ class Headpage extends StatelessWidget {
               child: Column(
                 children: [
                   const Padding(
-                    padding: EdgeInsets.only(top: 150, right: 25, left: 25),
+                    padding: EdgeInsets.only(top: 100, right: 25, left: 25),
                     child: TextField(
+                      keyboardType: TextInputType.emailAddress,
                       style: TextStyle(color: Colors.white),
                       decoration: InputDecoration(
                         enabledBorder: OutlineInputBorder(
@@ -41,7 +42,25 @@ class Headpage extends StatelessWidget {
                               color: Color(0xFFFFFFFF),
                               style: BorderStyle.solid),
                         ),
-                        labelText: 'Enter your name',
+                        labelText: 'Enter your e-mail',
+                        labelStyle: TextStyle(
+                          color: Color(0xFFFFFFFF),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.only(top: 30, right: 25, left: 25),
+                    child: TextField(
+                      obscureText: true,
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: Color(0xFFFFFFFF),
+                              style: BorderStyle.solid),
+                        ),
+                        labelText: 'Password',
                         labelStyle: TextStyle(
                           color: Color(0xFFFFFFFF),
                         ),
@@ -56,7 +75,7 @@ class Headpage extends StatelessWidget {
                               MaterialPageRoute(
                                   builder: (ctx) => const Fluidbottom()));
                         },
-                        child: const Text("Let's start")),
+                        child: const Text("Log in")),
                   )
                 ],
               ),
@@ -64,24 +83,24 @@ class Headpage extends StatelessWidget {
           ),
         ],
       ),
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 95, 95, 95),
-        elevation: 0,
-        actions: [
-          Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: ElevatedButton(
-                style: const ButtonStyle(
-                    backgroundColor:
-                        MaterialStatePropertyAll(Color.fromARGB(160, 0, 0, 0))),
-                onPressed: () {
-                  Navigator.of(context).pushReplacement(
-                      MaterialPageRoute(builder: (ctx) => const Fluidbottom()));
-                },
-                child: const Text('Skip')),
-          ),
-        ],
-      ),
+      // appBar: AppBar(
+      //   backgroundColor: const Color.fromARGB(255, 95, 95, 95),
+      //   elevation: 0,
+      //   actions: [
+      //     Padding(
+      //       padding: const EdgeInsets.all(10.0),
+      //       child: ElevatedButton(
+      //           style: const ButtonStyle(
+      //               backgroundColor:
+      //                   MaterialStatePropertyAll(Color.fromARGB(160, 0, 0, 0))),
+      //           onPressed: () {
+      //             Navigator.of(context).pushReplacement(
+      //                 MaterialPageRoute(builder: (ctx) => const Fluidbottom()));
+      //           },
+      //           child: const Text('Skip')),
+      //     ),
+      //   ],
+      // ),
     );
   }
 }

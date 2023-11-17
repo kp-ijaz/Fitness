@@ -1,8 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:homeworkout/admin_or_user.dart';
 // import 'package:homeworkout/btmnavigation.dart';
-import 'package:homeworkout/login.dart';
+// import 'package:homeworkout/login.dart';
 
 class Splashscrn extends StatefulWidget {
   const Splashscrn({super.key});
@@ -16,8 +17,8 @@ class _SplashscrnState extends State<Splashscrn> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 2), () {
-      Navigator.of(context)
-          .pushReplacement(MaterialPageRoute(builder: (ctx) => Headpage()));
+      Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (ctx) => Admin_user_page()));
     });
   }
 

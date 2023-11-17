@@ -16,6 +16,13 @@ class Breakfast extends StatelessWidget {
     ];
 
     return Scaffold(
+      floatingActionButton: CircleAvatar(
+        radius: 30,
+        child: Icon(
+          Icons.add,
+          size: 30,
+        ),
+      ),
       backgroundColor: const Color.fromARGB(255, 3, 12, 44),
       body: ListView.builder(
         itemBuilder: (BuildContext context, int index) {

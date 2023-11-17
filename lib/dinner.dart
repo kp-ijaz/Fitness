@@ -15,6 +15,13 @@ class Dinner extends StatelessWidget {
       'Fish curry, boiled green peas salad,\nBrown RiceGarden PeasMilk'
     ];
     return Scaffold(
+      floatingActionButton: CircleAvatar(
+        radius: 30,
+        child: Icon(
+          Icons.add,
+          size: 30,
+        ),
+      ),
       backgroundColor: const Color.fromARGB(255, 3, 12, 44),
       body: ListView.builder(
         itemBuilder: (BuildContext context, int index) {

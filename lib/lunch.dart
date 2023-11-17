@@ -15,6 +15,13 @@ class Lunch extends StatelessWidget {
       'Whole wheat pasta with chicken\nand Green Salad'
     ];
     return Scaffold(
+      floatingActionButton: CircleAvatar(
+        radius: 30,
+        child: Icon(
+          Icons.add,
+          size: 30,
+        ),
+      ),
       backgroundColor: const Color.fromARGB(255, 3, 12, 44),
       body: ListView.builder(
         itemBuilder: (BuildContext context, int index) {

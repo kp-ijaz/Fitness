@@ -21,8 +21,8 @@ class Tipspage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              icon: Icon(Icons.arrow_back_rounded)),
-          title: Text('TIPS'),
+              icon: const Icon(Icons.arrow_back_rounded)),
+          title: const Text('TIPS'),
           centerTitle: true,
         ),
         body: ListView(
@@ -40,6 +40,13 @@ class Tipspage extends StatelessWidget {
               ),
             )
           ],
+        ),
+        floatingActionButton: const CircleAvatar(
+          radius: 30,
+          child: Icon(
+            Icons.add,
+            size: 30,
+          ),
         ),
       ),
     );
